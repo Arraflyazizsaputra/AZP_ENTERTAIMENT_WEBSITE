@@ -1,60 +1,35 @@
 # CodeIgniter 4 Framework
 
-## What is CodeIgniter?
+1. Deskripsi & Fungsi Utama Proyek
+AZP Entertainment Website adalah platform web profil perusahaan (corporate entertainment website) dan sistem manajemen agensi hiburan terpadu berbasis framework CodeIgniter 4 dengan arsitektur MVC (Model-View-Controller). Website ini dirancang sebagai etalase digital profesional yang merepresentasikan identitas AZP Entertainment, berfungsi untuk memperkenalkan profil agensi, mempublikasikan portofolio karya musik, mempromosikan talenta/artis binaan, memfasilitasi audisi bakat baru secara daring, serta membuka peluang kolaborasi bisnis dan sponsor secara transparan dan interaktif.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+2. Isi & Struktur Sistem
+Sistem website ini terbagi menjadi dua ekosistem utama: Antarmuka Publik (Front-End) yang berorientasi pada pengalaman visual pengunjung dengan desain elegan dan modern, serta Panel Administrasi (Back-End Admin CMS) yang dilindungi sistem autentikasi berbasis sesi (Auth Filter). Melalui struktur modular CodeIgniter 4, seluruh data dinamis—mulai dari informasi perusahaan, katalog roster artis, pemutar musik digital, album, dokumentasi galeri studio, formulir audisi, hingga pesan kontak masuk—dikelola secara terpusat melalui relasi basis data MySQL yang terorganisir rapi dan aman.
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+3. Fitur Lengkap Sisi Publik (Front-End)
+Beranda Dinamis & Interaktif (Home & Explore): Menyajikan hero section berkelas, teks pengumuman berjalan (running text ticker) yang dapat diatur dinamis dari admin, cuplikan rilisan musik terbaru, sorotan artis unggulan, serta pemutar audio (embedded audio player) untuk mendengarkan lagu karya artis AZP Entertainment secara langsung di browser.
+Katalog & Profil Detail Artis (Artist Roster & Discography): Halaman khusus yang menampilkan daftar artis dengan fitur filter kategori. Setiap artis memiliki halaman profil eksklusif yang memuat biografi mendalam, daftar diskografi lagu, pemutar musik terintegrasi, galeri foto pertunjukan, dan capaian penghargaan (awards).
+Galeri Studio & Media (Studio Gallery): Dokumentasi visual kegiatan studio, pemotretan, dan aktivitas di balik layar dengan dukungan teknologi pemuatan foto bertahap (AJAX load-more) guna menjaga kecepatan loading halaman secara optimal.
+Pusat Audisi & Rekrutmen Bakat Baru (Audition Portal): Menampilkan informasi audisi terbuka lengkap dengan persyaratan dan formulir pendaftaran daring terintegrasi (online application form), memungkinkan calon artis mengunggah portofolio data diri secara mudah.
+Peluang Kolaborasi & Karir (Opportunities & Sponsorship): Wadah informasi resmi terkait program kemitraan/sponsor bagi brand pihak ketiga serta lowongan karir profesional di lingkungan AZP Entertainment.
+Tentang Kami & Kontak (About & Inquiries): Profil menyeluruh perusahaan, visi-misi, sejarah singkat, jejak penghargaan institusional, serta form kontak interaktif bagi pengunjung atau mitra bisnis untuk mengirimkan pesan resmi.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+5. Fitur Lengkap Sisi Manajemen (Back-End Admin CMS)
+Sistem Autentikasi & Keamanan: Fitur login dan register terproteksi menggunakan middleware AuthFilter untuk memastikan hanya administrator resmi yang dapat mengakses panel dashboard.
+Dashboard Terpusat (Executive Summary): Halaman utama admin yang menampilkan ringkasan statistik operasional website secara seketika.
+Manajemen Artis & Konten Profil (Artist & Profile Management): Operasi CRUD penuh untuk menambah, memperbarui, atau menghapus data artis, mendefinisikan detail biografi, serta mengelola lagu-lagu dalam diskografi artis via AJAX.
+Manajemen Rilis Album & Berkas Musik (Album & Media Management): Pengelolaan peluncuran album, unggahan berkas sampul (cover art), dan berkas audio MP3 secara terstruktur pada direktori publik.
+Manajemen Galeri Studio (Studio Gallery Management): Kontrol penuh atas dokumentasi foto dan sorotan visual studio yang tampil pada halaman galeri publik.
+Manajemen Audisi & Seleksi Pelamar (Audition & Applicant Processing): Pengaturan jadwal pembukaan audisi serta peninjauan berkas pelamar masuk (applications viewer) dengan opsi eliminasi/penghapusan data.
+Manajemen Kemitraan & Karir (Sponsor & Career Opportunities): Pengelolaan entitas sponsor aktif serta pembukaan lowongan pekerjaan di agensi.
+Kotak Masuk Pesan (Inquiries Inbox): Pusat penampungan pesan masuk dari formulir kontak publik untuk mempermudah tindak lanjut komunikasi bisnis.
+Pengaturan Teks Pengumuman & Profil Perusahaan (Global Settings): Kontrol fleksibel atas teks berjalan (running text), konten halaman About, dan daftar pencapaian penghargaan agensi.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+7. Ringkasan Teknologi (Tech Stack)
 
-## Important Change with index.php
+Platform ini dibangun menggunakan:
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Framework Backend: PHP 8+ dengan CodeIgniter 4 (arsitektur MVC).
+Basis Data: MySQL / MariaDB via Query Builder & CI4 Models.
+Antarmuka (Front-End): HTML5, CSS3, JavaScript (AJAX/Fetch API), Bootstrap untuk tata letak responsif, dan Audio API untuk streaming musik.
+Server Environment: Apache (XAMPP) dengan konfigurasi perutean URL bersih (clean routes via .htaccess).
