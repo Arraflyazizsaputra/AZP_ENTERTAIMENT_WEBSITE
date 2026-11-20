@@ -1,0 +1,47 @@
+# ============================================================
+# CodeIgniter 4 .gitignore
+# ============================================================
+
+# ----- IDE / Editor -----
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----- OS generated files -----
+ehthumbs.db
+Desktop.ini
+
+# ----- Composer -----
+/vendor/
+
+# ----- Writable directory (logs, cache, sessions, debugbar) -----
+writable/cache/*
+writable/logs/*
+writable/session/*
+writable/debugbar/*
+writable/uploads/*
+
+# Keep the directories with .gitkeep
+!writable/cache/.gitkeep
+!writable/logs/.gitkeep
+!writable/session/.gitkeep
+!writable/debugbar/.gitkeep
+!writable/uploads/.gitkeep
+
+# ----- Environment -----
+.env
+
+# ----- PHPUnit -----
+phpunit.result.cache
+.phpunit.result.cache
+
+# ----- Build / Misc -----
+/build/
+*.cache
+*.log
